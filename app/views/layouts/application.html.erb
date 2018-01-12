@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PracticeApi</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type='text/javascript' src='js/infinite-rotator.js'></script>
+  <%#  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />%>
+  </head>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+    <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+
+    <div class="center-block" id="rotating-item-wrapper">
+          <%= image_tag("nfl_stadium.jpg", class: "rotating-item", width:"750px", height:"347px") %>
+          <%= image_tag("panthers.jpeg", class: "rotating-item", width:"750px", height:"347px") %>
+          <%= image_tag("peyton.jpg", class: "rotating-item", width:"750px", height:"347px") %>
+          <%= image_tag("colts.jpg", class: "rotating-item", width:"750px", height:"347px") %>
+          <%= image_tag("peyton2.jpg", class: "rotating-item", width:"750px", height:"347px") %>
+          <%= image_tag("colts.jpg", class: "rotating-item", width:"750px", height:"347px") %>
+    </div>
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

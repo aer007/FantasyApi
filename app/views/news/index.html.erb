@@ -1,0 +1,25 @@
+
+
+<h2 align="center"> League News </h2>
+<%  @all_articles.each do |article|%>
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="well well-lg">
+      <div class="text-center">
+        <% @test = article %>
+        <strong><%= link_to article["title"], news_show_path(article) %></strong>
+     </div>
+      <div class="article-body">
+        <div class="text-center">
+          <%= image_tag article["urlToImage"], height:"200px", width: "275px;" %>
+        </div>
+          <%=article["description"] %>
+          <div class="article-meta-details">
+          <small>Created by: <%=article["author"]%>
+             <%#<%= article["TimeAgo"]%></small>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
